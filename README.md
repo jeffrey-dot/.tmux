@@ -53,6 +53,22 @@
 
 ## 安装
 
+### 一键安装
+
+```bash
+# 备份现有配置（如果存在）
+[ -d ~/.config/tmux ] && mv ~/.config/tmux ~/.config/tmux.backup
+[ -f ~/.tmux.conf ] && mv ~/.tmux.conf ~/.tmux.conf.backup
+
+# 克隆仓库
+git clone https://github.com/jeffrey-dot/.tmux.git ~/.config/tmux
+
+# 创建符号链接
+ln -sf ~/.config/tmux/.tmux.conf ~/.tmux.conf
+```
+
+### 手动安装
+
 1. 创建符号链接：
 ```bash
 ln -s ~/.config/tmux/.tmux.conf ~/.tmux.conf
